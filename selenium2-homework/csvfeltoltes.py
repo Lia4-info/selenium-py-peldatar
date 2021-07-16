@@ -10,10 +10,12 @@ try:
 
     browser.get(URL)
 
+
     def find_and_clear(id):
         element = browser.find_element_by_id(id)
         element.clear()
         return element
+
 
     with open("table_in.csv", "r", encoding="UTF-8") as table:
         csv_reader = csv.reader(table, delimiter=',')
